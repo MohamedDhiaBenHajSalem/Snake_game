@@ -10,6 +10,11 @@ screen.tracer(0)
 peter_the_snake=Snake()
 
 
+screen.listen()
+screen.onkey(fun=peter_the_snake.up,key="Up")
+screen.onkey(fun=peter_the_snake.down,key="Down")
+screen.onkey(fun=peter_the_snake.left,key="Left")
+screen.onkey(fun=peter_the_snake.right,key="Right")
 
 
 
