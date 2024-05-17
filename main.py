@@ -34,6 +34,7 @@ while game_is_on:
 
     if peter_the_snake.segments[0].distance(food_snake)<15:
         score.score_counting()
+        peter_the_snake.add_new_segment()
         food_snake.refresh_food()
 
 
@@ -42,6 +43,13 @@ while game_is_on:
         game_is_on=False
         score.gameover()
 
+
+    for segment in  peter_the_snake.segments:
+        if segment==peter_the_snake.segments[0]:
+            pass
+        elif  peter_the_snake.segments[0].distance(segment)<10:
+            game_is_on=False
+            score.gameover()
 
 
 
