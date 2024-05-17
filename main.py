@@ -38,6 +38,12 @@ while game_is_on:
 
 
 
+    if peter_the_snake.segments[0].xcor()> 280 or peter_the_snake.segments[0].xcor()< -280 or peter_the_snake.segments[0].ycor()>280 or peter_the_snake.segments[0].ycor()<-280:
+        game_is_on=False
+        score.gameover()
+
+
+
 
 
 
