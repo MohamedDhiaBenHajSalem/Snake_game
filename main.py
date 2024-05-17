@@ -44,10 +44,9 @@ while game_is_on:
         score.gameover()
 
 
-    for segment in  peter_the_snake.segments:
-        if segment==peter_the_snake.segments[0]:
-            pass
-        elif  peter_the_snake.segments[0].distance(segment)<10:
+    for segment in  peter_the_snake.segments[1:]:
+
+        if  peter_the_snake.segments[0].distance(segment)<10:
             game_is_on=False
             score.gameover()
 
