@@ -32,6 +32,7 @@ while game_is_on:
     time.sleep(0.1)
     peter_the_snake.move()
 
+
     if peter_the_snake.segments[0].distance(food_snake)<15:
         score.score_counting()
         peter_the_snake.add_new_segment()
@@ -40,15 +41,21 @@ while game_is_on:
 
 
     if peter_the_snake.segments[0].xcor()> 280 or peter_the_snake.segments[0].xcor()< -280 or peter_the_snake.segments[0].ycor()>280 or peter_the_snake.segments[0].ycor()<-280:
-        game_is_on=False
-        score.gameover()
+
+
+        score.high_scoreupdate()
+        peter_the_snake.reset()
 
 
     for segment in  peter_the_snake.segments[1:]:
 
         if  peter_the_snake.segments[0].distance(segment)<10:
-            game_is_on=False
-            score.gameover()
+
+
+            score.high_scoreupdate()
+
+            peter_the_snake.reset()
+
 
 
 
